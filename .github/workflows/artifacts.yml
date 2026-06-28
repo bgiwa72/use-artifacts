@@ -18,4 +18,4 @@ jobs:
 
        - name: Printout Jobs Level Message
         run: 
-           echo "JOBS MESSAGE : $JOBS_MSG"
+           echo "JOBS MESSAGE :$JOBS_MSG"
