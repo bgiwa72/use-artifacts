@@ -1,7 +1,7 @@
 name: Sample workflow
 
 env:
-   GLOBAL_MSG: "This is my test message!!!"
+   GLOBAL_MSG: "This is a Workflow global test message!!!"
 
 on: [push]
 
@@ -10,8 +10,12 @@ jobs:
      name: Printout Message
      runs-on: ubuntu-latest
      env:
-       JOBS_MSG: "This is a global jobs message"
+       JOBS_MSG: "This is a jobs level message!!!"
      steps:
        - name: Printout Global Message
          run: 
            echo "GLOBAL_MESSAGE :$GLOBAL_MSG"
+
+       - name: Printout Jobs Level Message
+        run: 
+           echo "JOBS MESSAGE : $JOBS_MSG"
