@@ -1,0 +1,17 @@
+name: Sample workflow
+
+env:
+   GLOBAL_MSG: "This is my test message!!!"
+
+on: [push]
+
+jobs:
+  printout:
+     name: Printout Message
+     runs-on: ubuntu-latest
+     env:
+       JOBS_MSG: "This is a global jobs message"
+     steps:
+       - name: Printout Global Message
+         run: 
+           echo "GLOBAL_MESSAGE :$GLOBAL_MSG"
