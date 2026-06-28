@@ -17,5 +17,5 @@ jobs:
            echo "GLOBAL_MESSAGE :$GLOBAL_MSG"
 
        - name: Printout Jobs Level Message
-        run: 
+         run: 
            echo "JOBS MESSAGE :$JOBS_MSG"
