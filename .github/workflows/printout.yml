@@ -1,7 +1,7 @@
 name: Printout workflow
 
 env:
-   GLOBAL_MSG: "This is a Workflow global test message!!!"
+   GLOBAL_MSG: "This is a GLOBAL Level message!!!"
 
 on: [push]
 
@@ -10,12 +10,16 @@ jobs:
      name: Printout Message
      runs-on: ubuntu-latest
      env:
-       JOBS_MSG: "This is a jobs level message!!!"
+       JOBS_MSG: "This is a JOBS level message!!!"
      steps:
        - name: Printout Global Message
-         run: 
-           echo "GLOBAL_MESSAGE :$GLOBAL_MSG"
-
+         run: echo "GLOBAL_MESSAGE :$GLOBAL_MSG"
+      
        - name: Printout Jobs Level Message
          run: 
            echo "JOBS MESSAGE :$JOBS_MSG"
+            
+       - name: Printout Steps Level Message
+         env:
+            STEP_MSG: "This is a STEPS level message!!!" 
+         run: echo "STEP_MSG :$STEPS_MSG"
