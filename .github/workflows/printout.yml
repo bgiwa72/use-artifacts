@@ -1,4 +1,4 @@
-name: Sample workflow
+name: Printout workflow
 
 env:
    GLOBAL_MSG: "This is a Workflow global test message!!!"
