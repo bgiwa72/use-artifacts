@@ -2,6 +2,7 @@ name: Artifacts
 
 on: [push]
 env:
+  FILE_NAME: web-server
   ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION : "true"
 
 jobs:
