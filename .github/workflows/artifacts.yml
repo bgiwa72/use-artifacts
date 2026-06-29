@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
-        uses: actions/check-out@v4
+        uses: actions/checkout@v4
         
       - name: Build ${{ env.FILE_NAME }} for linux
         run: go build ${{env.FILE_NAME}}.go
